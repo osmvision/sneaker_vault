@@ -1,0 +1,66 @@
+name: sneaker_vault
+description: "The ultimate sneaker collection app."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # UI
+  cupertino_icons: ^1.0.6
+  google_fonts: ^6.1.0
+  flutter_animate: ^4.5.0
+  fl_chart: ^0.66.0      # Pour le graphique Market
+  lottie: ^3.1.0
+  
+  # --- MAPS (OpenStreetMap) ---
+  flutter_map: ^6.1.0       # Le moteur de carte
+  latlong2: ^0.9.0          # Pour gérer Latitude/Longitude
+  url_launcher: ^6.2.4 
+  geolocator: ^11.0.0     # (Optionnel) Pour ouvrir le GPS externe si besoin
+  # Logic
+  flutter_riverpod: ^2.4.9
+  audioplayers: ^5.2.1
+  dio: ^5.4.0
+
+  # Data & System
+  sqflite: ^2.3.0
+  path: ^1.9.0
+  image_picker: ^1.0.7
+  path_provider: ^2.1.2
+  http: ^1.2.0
+  html: ^0.15.4
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.10
+  
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/sounds/  # ⚠️ Assure-toi que beat.mp3 est bien dedans !
+    - assets/animations/  # Pour les fichiers Lottie des badges
+
+# CONFIGURATION DE L'ICÔNE
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/splash_logo.png" # On va devoir mettre une image ici
+  min_sdk_android: 21
+
+# CONFIGURATION DE L'ÉCRAN DE DÉMARRAGE
+flutter_native_splash:
+  color: "#050505" # Le fond noir de ton app
+  image: "assets/splash_logo.png" # Ton logo au centre
+  android: true
+  ios: true
+  fullscreen: true
+
+
